@@ -2,8 +2,6 @@
 void main(List<String> args) {
 
   // const
-  const name = 'Foo';
-  const list = [1,2,3];
 
   /**
    * we can't reassign/modify the const
@@ -13,9 +11,10 @@ void main(List<String> args) {
    * list.removeAt(0); // error
    */
 
+  const name = 'Foo';
+  const list = [1,2,3];
+
   // Final
-  final finalName = 'Foo';
-  final finalList = [1,2,3];
 
   /**
    * we can't reassign final but we can modify its value
@@ -24,6 +23,39 @@ void main(List<String> args) {
    * finalList.removeAt(0); // Works Fine -> Output = [2,3]
    *
    * */
+
+  final finalName = 'Foo';
+  final finalList = [1,2,3];
+
+  // Mutable Variables
+
+  /**
+   * var used to declare mutable variable we can reassign/modify those
+   *
+   * */
+
+  var address = '3rd street, NYC';
+  print(address);
+  address = '4th street, NYC';
+  print(address);
+
+  // Assign const with another const
+
+  /**
+   * const to const is allowed
+   * final to const is not allowed
+   *
+   * */
+
+  /// Valid
+  const constValue = 'hi';
+  final assignConstToFinal = constValue;
+
+  /// Invalid
+  /// const assignFinalToConst = assignConstToFinal
+
+
+
 
 
 
